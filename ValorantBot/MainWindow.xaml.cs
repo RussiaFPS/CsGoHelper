@@ -41,7 +41,7 @@ namespace ValorantBot
             while (PressButton)//само ожидание нажатие клавиши 
             {
                 Thread.Sleep(40);
-                if ((Keyboard.GetKeyStates(Key.LeftCtrl) & KeyStates.Down) > 0)
+                if ((Keyboard.GetKeyStates(Key.F8) & KeyStates.Down) > 0)
                 {
                     SetCursorPos(25, 100);//поиск кнопки старт в csgo
                     ClickMouse();
@@ -57,14 +57,7 @@ namespace ValorantBot
                         Thread.Sleep(40);
                         Buffer = GetColorAt(960, 610);
                     }
-                    SetCursorPos(1, 1);
-                    /*Color s = GetColorAt(100, 200);
-                    byte g = s.G;
-                    byte b = s.B;
-                    byte r = s.R;
-                    byte a = s.A;*/
-                    /* string text = String.Format("Slate Blue has these ARGB values: Alpha:{0}, " +
-                     "red:{1}, green: {2}, blue {3}", new object[] { a, r, g, b });*/
+                    ClickMouse();
                     PressButton = false;
                 }
             }

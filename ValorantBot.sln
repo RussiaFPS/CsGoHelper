@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValorantBot", "ValorantBot\ValorantBot.csproj", "{72B813A3-DE63-4BF6-ABE6-9F28C0D0386D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F5F197DF-CA1D-4E20-8B26-9FD278D49522}"
+	ProjectSection(SolutionItems) = preProject
+		ValorantBot\Assets\mountains.png = ValorantBot\Assets\mountains.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

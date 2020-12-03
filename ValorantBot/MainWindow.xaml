@@ -4,9 +4,40 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ValorantBot"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Height="780" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Title="CsGoHelper">
     <Grid>
-        <Button x:Name="buttonStart" Content="Start" HorizontalAlignment="Left" Margin="352,253,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
+        <Button x:Name="buttonStart" Content="Start" HorizontalAlignment="Left" Margin="1031,524,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
+        <Grid x:Name="GridMenu" Width="250" HorizontalAlignment="Center">
+            <StackPanel>
+                <Image Height="400" Stretch="Fill" Source="mountains.png"/>
+                <ListView Foreground="#FF313131" FontFamily="Champane &amp; Limousines" FontSize="18">
+                    <ListViewItem Height="45" Padding="0">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="Support" Width="20" Height="20" Foreground="Green" VerticalAlignment="Center"/>
+                            <TextBlock Text="Помошник" Margin="10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Padding="0">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="Book" Width="20" Height="20" Foreground="DarkKhaki" VerticalAlignment="Center"/>
+                            <TextBlock Text="Статистика" Margin="10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Padding="0">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="Settings" Width="20" Height="20" Foreground="#FF0069C1" VerticalAlignment="Center"/>
+                            <TextBlock Text="Настройки" Margin="10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Padding="0">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="ExitToApp" Width="20" Height="20" Foreground="DarkRed"  VerticalAlignment="Center"/>
+                            <TextBlock Text="Выход" Margin="10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
