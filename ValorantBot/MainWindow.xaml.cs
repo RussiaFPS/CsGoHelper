@@ -28,11 +28,17 @@ namespace ValorantBot
 
         private void StartButton_Click(object sender, RoutedEventArgs e)//оброботчик нажатия клавиши start начало программы
         {
+            this.Hide();//скрыть это форму
+            Window1 helper = new Window1();//создаем окно с Помошником
+            helper.Show();//показать окно с помошником
             Thread Th = new Thread(Keybor);//Создаем поток для ожидания нажатия клавиши с клавы
             Th.SetApartmentState(ApartmentState.STA);
             Th.Start();//запуск потока
         }
-
+        private void ExitButton_Click(object sender, RoutedEventArgs e)//оброботчик нажатия кнопки выйти из приложения
+        {
+            Application.Current.Shutdown();//сам выход из приложухи
+        }
         void Keybor()//Новый поток для ожидания нажатия клавиши с клавы
         {
             Color ButtonAccept= Color.FromArgb(255,76,175,80);//создание цвета кнопки принять из csgo

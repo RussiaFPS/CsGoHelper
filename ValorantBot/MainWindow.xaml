@@ -5,39 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ValorantBot"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="780" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Title="CsGoHelper">
+        mc:Ignorable="d" Height="700" Width="1000" WindowStartupLocation="CenterScreen" Title="CsGoHelper" ResizeMode="CanMinimize">
+    <Window.Background>
+        <ImageBrush ImageSource="Menu_Back.png"/>
+    </Window.Background>
     <Grid>
-        <Button x:Name="buttonStart" Content="Start" HorizontalAlignment="Left" Margin="1031,524,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
-        <Grid x:Name="GridMenu" Width="250" HorizontalAlignment="Center">
-            <StackPanel>
-                <Image Height="400" Stretch="Fill" Source="mountains.png"/>
-                <ListView Foreground="#FF313131" FontFamily="Champane &amp; Limousines" FontSize="18">
-                    <ListViewItem Height="45" Padding="0">
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Support" Width="20" Height="20" Foreground="Green" VerticalAlignment="Center"/>
-                            <TextBlock Text="Помошник" Margin="10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Height="45" Padding="0">
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Book" Width="20" Height="20" Foreground="DarkKhaki" VerticalAlignment="Center"/>
-                            <TextBlock Text="Статистика" Margin="10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Height="45" Padding="0">
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Settings" Width="20" Height="20" Foreground="#FF0069C1" VerticalAlignment="Center"/>
-                            <TextBlock Text="Настройки" Margin="10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Height="45" Padding="0">
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="ExitToApp" Width="20" Height="20" Foreground="DarkRed"  VerticalAlignment="Center"/>
-                            <TextBlock Text="Выход" Margin="10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                </ListView>
-            </StackPanel>
-        </Grid>
+        <Button x:Name="buttonStart" Content="Start" HorizontalAlignment="Left" Margin="780,524,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
+            <Button Content="Помошник" HorizontalAlignment="Left" Height="50" Margin="806,170,0,0" VerticalAlignment="Top" Width="134"
+                Background="#2a2d36"
+                Foreground="White"
+                FontFamily="Arial"
+                FontSize="18" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button Content="Статистика" HorizontalAlignment="Left" Height="50" Margin="612,297,0,0" VerticalAlignment="Top" Width="134"
+                Background="#2a2d36"
+                Foreground="White"
+                FontFamily="Arial"
+                FontSize="18" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button Content="Настройки" HorizontalAlignment="Left" Height="50" Margin="420,428,0,0" VerticalAlignment="Top" Width="134"
+                Background="#2a2d36"
+                Foreground="White"
+                FontFamily="Arial"
+                FontSize="18" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button x:Name="Exit" Content="Выход" HorizontalAlignment="Left" Height="50" Margin="236,554,0,0" VerticalAlignment="Top" Width="134" Click="ExitButton_Click"
+                Background="#2a2d36"
+                Foreground="White"
+                FontFamily="Arial"
+                FontSize="18" Style="{DynamicResource RoundedButtonStyle}"/>
     </Grid>
 </Window>
