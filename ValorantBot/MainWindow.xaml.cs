@@ -28,9 +28,10 @@ namespace ValorantBot
 
         private void StartButton_Click(object sender, RoutedEventArgs e)//оброботчик нажатия клавиши start начало программы
         {
-            this.Hide();//скрыть это форму
+           // this.Hide();//скрыть это форму
             Window1 helper = new Window1();//создаем окно с Помошником
             helper.Show();//показать окно с помошником
+            this.Close();//закрыть старое окно
             Thread Th = new Thread(Keybor);//Создаем поток для ожидания нажатия клавиши с клавы
             Th.SetApartmentState(ApartmentState.STA);
             Th.Start();//запуск потока
@@ -38,6 +39,15 @@ namespace ValorantBot
         private void ExitButton_Click(object sender, RoutedEventArgs e)//оброботчик нажатия кнопки выйти из приложения
         {
             Application.Current.Shutdown();//сам выход из приложухи
+        }
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)//оброботчик нажатия клавиши settings 
+        {
+            Settings settings = new Settings();//создаем окно Настройки
+            settings.Show();//показать его
+            this.Close();//закрыть старое
+            /* this.Hide();
+             Settings settings = new Settings();
+             settings.Show();*/
         }
         void Keybor()//Новый поток для ожидания нажатия клавиши с клавы
         {
@@ -82,7 +92,6 @@ namespace ValorantBot
             ReleaseDC(desk, dc);
             return Color.FromArgb(255, (byte)((a >> 0) & 0xff), (byte)((a >> 8) & 0xff), (byte)((a >> 16) & 0xff));
         }
-
         [DllImport("user32")]
         public static extern int SetCursorPos(int x, int y);
         [DllImport("user32.dll")]

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Helper" Height="700" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Window.Background>
-        <ImageBrush ImageSource="Menu_Back.png"/>
+        <ImageBrush ImageSource="Addons/Menu_Back.png"/>
     </Window.Background>
     <Grid>
 

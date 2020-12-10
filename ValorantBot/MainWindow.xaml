@@ -7,7 +7,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d" Height="700" Width="1000" WindowStartupLocation="CenterScreen" Title="CsGoHelper" ResizeMode="CanMinimize">
     <Window.Background>
-        <ImageBrush ImageSource="Menu_Back.png"/>
+        <ImageBrush ImageSource="Addons/Menu_Back.png"/>
     </Window.Background>
     <Grid>
         <Button x:Name="buttonStart" Content="Start" HorizontalAlignment="Left" Margin="780,524,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
@@ -21,7 +21,7 @@
                 Foreground="White"
                 FontFamily="Arial"
                 FontSize="18" Style="{DynamicResource RoundedButtonStyle}"/>
-            <Button Content="Настройки" HorizontalAlignment="Left" Height="50" Margin="420,428,0,0" VerticalAlignment="Top" Width="134"
+        <Button Content="Настройки" HorizontalAlignment="Left" Height="50" Margin="420,428,0,0" VerticalAlignment="Top" Width="134" Click="SettingsButton_Click"
                 Background="#2a2d36"
                 Foreground="White"
                 FontFamily="Arial"
