@@ -10,6 +10,21 @@
         <ImageBrush ImageSource="Addons/Menu_Back.png"/>
     </Window.Background>
     <Grid>
-
+        <Button Content="Старт" HorizontalAlignment="Left" Height="50" Margin="636,274,0,0" VerticalAlignment="Top" Width="134" Click="StartButton_Click"
+                Background="GreenYellow"
+                Foreground="#2a2d36"
+                FontFamily="Arial"
+                FontSize="18" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="Стоп" HorizontalAlignment="Left" Height="50" Margin="454,396,0,0" VerticalAlignment="Top" Width="134" Click="StopButton_Click"
+                Background="Red"
+                Foreground="#2a2d36"
+                FontFamily="Arial"
+                FontSize="18" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button HorizontalAlignment="Left" Height="35" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="BackButton_Click"
+                Background="Orange"
+                FontFamily="Arial"
+                FontSize="18" Style="{DynamicResource RoundedButtonStyle}">
+            <Image Source="Addons/back.png"></Image>
+        </Button>
     </Grid>
 </Window>
